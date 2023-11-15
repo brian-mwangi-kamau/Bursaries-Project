@@ -1,0 +1,4 @@
+.env
+my_venv/
+platform_/migrations/
+credentials.json
