@@ -2,6 +2,13 @@ from django.shortcuts import render
 import requests
 from .forms import ApplicationForm
 
+
+
+def homepage(request):
+    return render(request, 'homepage.html')
+
+
+
 def application(request):
     if request.method == 'POST':
         form = ApplicationForm(request.POST)
@@ -19,7 +26,7 @@ def application(request):
                 'email_address': form.cleaned_data['email_address'],
             }
 
-            url = 'http://127.0.0.1:8000/api/v1/apply/'
+            url = 'http://127.0.0.1/api/v1/apply/'
             response = requests.post(url, data=data)
 
             if response.status_code == 201:

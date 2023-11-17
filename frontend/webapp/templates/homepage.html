@@ -1,0 +1,239 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <title>NG-CDF Bursary Program</title>
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+      <link rel="icon" href="{% static 'img/ngcdf_logo.png' %}" type="image/gif" />
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   </head>
+   <body class="main-layout">
+      <div class="loader_bg">
+         <div class="loader"><img src="{% static 'img/loader-2.gif' %}" alt="#"/></div>
+      </div>
+      <div class="header">
+         <div class="container-fluid">
+            <div class="row d_flex">
+               <div class=" col-md-2 col-sm-3 col logo_section">
+                  <div class="full">
+                     <div class="center-desk">
+                        <div class="logo" style="height: 65px; width: 65px;">
+                           <a href="{% url 'homepage' %}"><img src="{% static 'img/ngcdf_logo.png' %}" alt="#" /></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-8 col-sm-12">
+                  <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                     </button>
+                     <div class="collapse navbar-collapse" id="navbarsExample04">
+                        <ul class="navbar-nav mr-auto">
+                           <li class="nav-item active">
+                              <a class="nav-link" href="{% url 'homepage' %}" style="background: #039250;">Home</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="#about" onmouseover="this.style.backgroundColor='#039250';" onmouseout="this.style.backgroundColor='';">About Us</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="#apply" onmouseover="this.style.backgroundColor='#039250';" onmouseout="this.style.backgroundColor='';">Apply</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="#contact" onmouseover="this.style.backgroundColor='#039250';" onmouseout="this.style.backgroundColor='';">Contact Us</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="full_bg">
+         <div class="slider_main">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-inner">
+                           <div class="carousel-item active">
+                              <div class="carousel-caption relative">
+                                 <div class="row d_flex">
+                                    <div  class="col-md-5">
+                                       <div class="board">
+                                          <!-- <i><img src="{% static 'img/top_icon.png' %}" alt="#"/></i> -->
+                                          <p style="color: black; font-size: 40px; font-weight: bold;">
+                                             Welcome
+                                          </p><br>
+                                          <div class="titlepage text_align_left ">
+                                             <p style="color: black;"> to the NG-CDF Bursary Program. 
+                                                We believe in the transformative power of education and are dedicated to providing opportunities
+                                                for students to pursue their academic dreams. Our commitment aims to 
+                                                break down financial barriers and foster a community where every student has the chance to excel.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                       <div class="banner_img">
+                                          <figure><img class="img_responsive" src="{% static 'img/ddd.png' %}"></figure>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+      <div class="shop">
+         <div class="container-fluid">
+            <div class="row d_flex d_grid">
+               <div class="col-md-7">
+                  <div class="shop_img text_align_center" data-aos="fade-right">
+                     <figure><img class="img_responsive" src="{% static 'img/ccc.png' %}" alt="#"/></figure>
+                  </div>
+               </div>
+               <div class="col-md-5 order_1_mobile">
+                  <div class="titlepage text_align_left ">
+                     <h2>Why  should <br>apply?</h2>
+                     <p>We help you unlock the door to your future with our bursary program. 
+                        From the first day of classes to the proud moment of holding your diploma, our support paves the way for your success. 
+                        Apply for a bursary today and let your aspirations take flight.
+                     </p>
+                     <a class="read_more" href="{% url 'application' %}" style="color: #039250;">Apply Now</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+      <section class="skating" id="apply">
+         <div class="container-fluid">
+             <div class="row">
+                 <div class="col-md-12">
+                     <div class="titlepage text_align_center">
+                         <h2>How it works</h2>
+                         <p>Explore the seamless process of our digital application. Watch the video below to see how it works
+                         </p>
+                     </div>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col-md-4">
+                     <div class="skating-box">
+                         <iframe width="200%" height="350" src="https://www.youtube.com/embed/d0GH5PSbzQ8" frameborder="0" allowfullscreen></iframe>
+                         <div class="link_btn">
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>
+
+      <div class="class">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center">
+                     <h2 id="about">About Our Program</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-4 margi_bottom">
+                  <div class="class_box text_align_center">
+                     <h3>Vision</h3>
+                     <p>Empowering Futures, Transforming Lives: Envisioning a society where every aspiring mind has equal access to education, breaking down financial barriers and fostering a future generation of leaders, innovators, and contributors to a thriving community. </p>
+                  </div>
+               </div>
+               <div class="col-md-4 margi_bottom">
+                  <div class="class_box blue text_align_center">
+                     <h3>Mission</h3>
+                     <p>Fueling Ambitions, Igniting Potential: Providing strategic financial support through bursaries, creating pathways for students to pursue higher education and fostering a diverse, inclusive, and empowered community of learners. </p>
+                  </div>
+               </div>
+               <div class="col-md-4 margi_bottom">
+                  <div class="class_box text_align_center">
+                     <h3>Values</h3>
+                     <p>At the core of our program is a commitment to Integrity, Equity, and Empowerment. We believe in transparency in our processes, ensuring fair and equitable distribution of resources, and empowering students to overcome financial obstacles.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-4 ">
+                     <div class="infoma">
+                        <h3 id="contact">Contact Us</h3>
+                        <ul class="conta">
+                           <li><i class="fa fa-map-marker" aria-hidden="true"></i>Nairobi, Kenya 
+                           </li>
+                           <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:0105073628">Call +254 105073628</a></li>
+                           <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="mailt:brianmwangikamau4@gmail.com"> brianmwangikamau4@gmail.com</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-md-8">
+                     <div class="row border_left">
+                        <div class="col-md-3">
+                           <div class="infoma text_align_left">
+                              <ul class="social_icon">
+                                 <li><a href="https://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                 <li><a href="https://x.com/brianmwangi_"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                 <li><a href="https://linkedin.com/in/brian-mwangi-kamau"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>© <span id="current-year"></span> All Rights Reserved. Design inspired by <a href="https://html.design/"> Free html Templates</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+      <!-- sidebar -->
+      <script src="{% static 'js/custom.js' %}"></script>
+      <script>
+         AOS.init();
+      </script>
+      <script>
+        // Get the current year
+         var currentYear = new Date().getFullYear();
+
+         // Update the element with the current year
+         document.getElementById("current-year").textContent = currentYear;
+      </script>
+   </body>
+</html>

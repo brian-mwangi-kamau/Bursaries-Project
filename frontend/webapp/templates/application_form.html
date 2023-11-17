@@ -1,12 +1,224 @@
+{% load static %}
 <!DOCTYPE html>
 <head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <title>Application</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/application_form.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link rel="icon" href="{% static 'img/ngcdf_logo.png' %}" type="image/gif" />
 </head>
 <body>
-    <form method="post" action="{% url 'application' %}">
+  <div class="loader_bg">
+    <div class="loader"><img src="{% static 'img/loader-2.gif' %}" alt="#"/></div>
+  </div>
+
+  <div class="header">
+    <div class="container-fluid">
+     <div class="row d_flex">
+        <div class=" col-md-2 col-sm-3 col logo_section">
+          <div class="full">
+            <div class="center-desk">
+              <!-- <div class="logo" style="height: 65px; width: 65px;">
+                <a href="{% url 'homepage' %}"><img src="{% static 'img/ngcdf_logo.png' %}" alt="#" /></a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="formbold-main-wrapper">
+    <div class="formbold-form-wrapper">
+  
+      <form method="POST" action="{% url 'application' %}">
         {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Submit Application">
-    </form>
+        <div class="formbold-form-title">
+          <h2 class="heading">Apply for a bursary now</h2>
+          <p>
+            By filling in the form below, you agree with the <a href="" style="text-decoration: underline; color: blue;">terms and conditions</a>
+          </p>
+        </div>
+  
+        <div class="full-input">
+          <label for="student_name" class="formbold-form-label">
+          The student's name<span class="required">*</span>
+          </label>
+          <input
+            type="text"
+            name="student_name"
+            id="student_name"
+            class="formbold-form-input"
+            required
+          />
+        </div>
+
+        <div class="full-input">
+          <label for="gender" class="formbold-form-label">
+          Gender<span class="required">*</span>
+          </label>
+          <select name="gender" id="gender" class="formbold-form-input" required>
+            <option value="" disabled selected>----</option>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="full-input">
+          <label for="school_name" class="formbold-form-label">
+          The school name<span class="required">*</span>
+          </label>
+          <input
+            type="text"
+            name="school_name"
+            id="school_name"
+            class="formbold-form-input"
+            required
+          />
+        </div>
+
+        <div class="formbold-input-flex">
+            <div>
+              <label for="admission_number" class="formbold-form-label">
+              Admission number<span class="required">*</span>
+              </label>
+              <input
+                type="text"
+                name="admission_number"
+                id="admission_number"
+                class="formbold-form-input"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="year_of_study" class="formbold-form-label">
+              Form/Year of study<span class="required">*</span>
+              </label>
+              <input
+                type="text"
+                name="year_of_study"
+                id="year_of_study"
+                class="formbold-form-input"
+                required
+              />
+            </div>
+        </div>
+
+        <div class="formbold-input-flex">
+          <div>
+            <label for="constituency" class="formbold-form-label">
+              Constituency<span class="required">*</span>
+            </label>
+            <select name="constituency" id="constituency" class="formbold-form-input" required>
+              <option value="" disabled selected>----</option>
+                <option value="Ndaragwa">Ndaragwa</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="location" class="formbold-form-label">
+            Location<span class="required">*</span>
+            </label>
+            <select name="location" id="location" class="formbold-form-input" required>
+              <option value="" disabled selected>----</option>
+              <option value="Karai">Karai</option>
+              <option value="Kirima">Kirima</option>
+              <option value="Kahira">Kahira</option>
+              <option value="Kanyagia">Kanyagia</option>
+              <option value="Kahutha">Kahutha</option>
+              <option value="Kiriogo">Kiriogo</option>
+              <option value="Muruai">Muruai</option>
+              <option value="Mwangaza">Mwangaza</option>
+              <option value="Mwihoko">Mwihoko</option>
+              <option value="Mairo inya">Mairo inya</option>
+              <option value="Mathingira">Mathingira</option>
+              <option value="Ngawa">Ngawa</option>
+              <option value="Shamata">Shamata</option>
+            </select>
+          </div>
+        </div>
+  
+        <div class="formbold-input-flex">
+          <div>
+            <label for="phone_number" class="formbold-form-label"> Phone number<span class="required">*</span> </label>
+            <input
+              type="text"
+              name="phone_number"
+              id="phone_number"
+              class="formbold-form-input"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="id_number" class="formbold-form-label"> ID Number<span class="required">*</span></label>
+            <input
+              type="text"
+              name="id_number"
+              id="id_number"
+              class="formbold-form-input"
+              required
+            />
+          </div>
+        </div>
+  
+        <div class="email-text">
+          <p>
+            Updates on the status of your application will be sent to here.
+          </p>
+            <label for="email_address" class="formbold-form-label"> Email Address<span class="required">*</span></label>
+            <input
+              type="email"
+              name="email_address"
+              id="email_address"
+              class="formbold-form-input"
+              required
+            />
+        </div>
+  
+        <div class="formbold-checkbox-wrapper">
+        </div>
+  
+        <button class="formbold-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer">
+       <div class="copyright">
+          <div class="container">
+             <div class="row">
+                <div class="col-md-12">
+                   <p>© <span id="current-year"></span> All Rights Reserved. Design inspired by <a href="https://html.design/"> Free html Templates</a></p>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </footer>
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+  <!-- sidebar -->
+  <script src="{% static 'js/custom.js' %}"></script>
+  <script>
+      AOS.init();
+  </script>
+  <script>
+    // Get the current year
+     var currentYear = new Date().getFullYear();
+
+     // Update the element with the current year
+     document.getElementById("current-year").textContent = currentYear;
+  </script>
 </body>
 </html>
